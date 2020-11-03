@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Rahul Chhabra</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <header class="bg-black p-6 shadow-lg">
+    <div class="container mx-auto">
+      <nav class="flex items-center justify-between flex-wrap">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">GenZ Mafia Members</span>
+        </div>
+        <a :href="meta.readMore" class="text-white hover:text-indigo-300 py-2 rounded-lg" target="_blank"></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-3 py-8">
+        <div class="w-1/1 md:w-1/2 lg:w-1/3 px-3 pb-6" v-for="item in items">
+          <div class="rounded overflow-hidden shadow-lg">
+            
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">{{ item.name }}</div>
+              </span>
+              <span class="text-gray-700 text-base">Discord: {{ item.discordUsername }}</>
+              <p class="text-gray-700 text-base">Twitter: {{ item.twitterUsername }}</p>
+            </div>
+            <div class="px-6 py-4">
+              <p class="text-gray-700 text-base font-semibold">Skills: </p><span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2" v-for="tag in getTags(item.skills)">#{{ tag }}</span>
+              <br><br><p class="text-gray-700 text-base font-semibold">Stacks/Softwares: </p><span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2" v-for="tag in getTags(item.stacksOrSoftwaresYouAreComfortableWith)">#{{ tag }}</span>
+              <br><br><p class="text-gray-700 text-base">Built in past: {{ item.whatHaveYouBuiltInPast }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container mx-auto pb-8 text-gray-500"></div>
+  </footer>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
