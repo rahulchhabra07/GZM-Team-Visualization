@@ -13,7 +13,7 @@ var app = new Vue({
     // Fetch the Items data from Sheety API
     axios
       .get('https://api.sheety.co/783dfdfdfe69edf884c0a5c69ecc5f2f/genZMafiaHackathonTeamBuildingResponses/formResponses1')
-      .then(response => (this.items=response.data.formResponses1))
+      .then(response => (console.log(response))
   },
   methods: {
     // Convert comma seperated tags to an array
