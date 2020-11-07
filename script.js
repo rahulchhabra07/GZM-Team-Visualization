@@ -12,7 +12,7 @@ var app = new Vue({
     
     // Fetch the Items data from Sheety API
     axios
-      .get('https://sheetdb.io/api/v1/3mkhs6hxzrsk6')
+      .get('https://api.sheety.co/ef476264d322c97b6ebfa14c5b332c7c/genZMafiaHackathonTeamBuildingResponses/formResponses1')
       .then(response => (this.items=response.data.formResponses1))
   },
   methods: {
